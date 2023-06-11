@@ -19,23 +19,8 @@ const massTitleElement = document.querySelector(".mass_title");
 const massInfoElement = document.querySelector(".mass_info");
 
 // Swap between the modes______________________________________________________
+
 function toggleMode() {
-  const bodyElement = document.querySelector("body");
-
-  const wrapperElement = document.querySelector(".wrapper");
-
-  const lengthElement = document.querySelector(".length");
-  const lengthTitleElement = document.querySelector(".length_title");
-  const lengthInfoElement = document.querySelector(".length_info");
-
-  const volumeElement = document.querySelector(".volume");
-  const volumeTitleElement = document.querySelector(".volume_title");
-  const volumeInfoElement = document.querySelector(".volume_info");
-
-  const massElement = document.querySelector(".mass");
-  const massTitleElement = document.querySelector(".mass_title");
-  const massInfoElement = document.querySelector(".mass_info");
-
   wrapperElement.classList.toggle("wrapperDark");
   bodyElement.classList.toggle("darkBody");
   convertorElement.classList.toggle("darkText");
@@ -98,6 +83,7 @@ convertorButton.addEventListener("click", function () {
 
     let pound = convertorElement.value * 2.204;
     let kilograms = convertorElement.value / 2.204;
+
     lengthInfoElement.textContent = `${
       convertorElement.value
     } meters = ${feets.toFixed(3)} feet | ${
