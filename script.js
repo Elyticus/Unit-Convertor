@@ -77,6 +77,10 @@ convertorButton.addEventListener("click", function () {
     let pound = convertorElement.value * 2.204;
     let kilograms = convertorElement.value / 2.204;
 
+    lengthInfoElement.classList.remove("errorText");
+    volumeInfoElement.classList.remove("errorText");
+    massInfoElement.classList.remove("errorText");
+
     lengthInfoElement.textContent = `${
       convertorElement.value
     } meters = ${feets.toFixed(3)} feet | ${
@@ -92,10 +96,14 @@ convertorButton.addEventListener("click", function () {
     } kilos = ${pound.toFixed(3)} pounds | ${
       convertorElement.value
     } pounds = ${kilograms.toFixed(3)} kilos`;
-  } else if (convertorElement.value < 0 && convertorElement.value.length < 0) {
-    lengthElement.textContent = "Invalid Value";
-    volumeElement.textContent = "Invalid Value";
-    massElement.textContent = "Invalid Value";
+  } else if (convertorElement.value <= 0) {
+    lengthInfoElement.textContent = "Error: Invalid Value";
+    volumeInfoElement.textContent = "Error: Invalid Value";
+    massInfoElement.textContent = "Error: Invalid Value";
+
+    lengthInfoElement.classList.add("errorText");
+    volumeInfoElement.classList.add("errorText");
+    massInfoElement.classList.add("errorText");
   }
 
   lengthInfoElement.style.display = "block";
