@@ -1,4 +1,5 @@
-const modeButton = document.getElementById("mode_btn");
+const modeButton = document.querySelector(".mode_btn");
+
 const bodyElement = document.querySelector("body");
 const convertorElement = document.getElementById("convertor_value");
 
@@ -21,6 +22,8 @@ const massInfoElement = document.querySelector(".mass_info");
 // Swap between the modes______________________________________________________
 
 function toggleMode() {
+  modeButton.classList.toggle("lightBg");
+
   wrapperElement.classList.toggle("wrapperDark");
   bodyElement.classList.toggle("darkBody");
   convertorElement.classList.toggle("darkText");
@@ -39,20 +42,10 @@ function toggleMode() {
   massTitleElement.classList.toggle("darkInfo");
   massInfoElement.classList.toggle("darkInfoPara");
   massElement.classList.toggle("lightShadow");
-
-  modeButton.addEventListener("mouseover", () => {
-    modeButton.style.background = "#1f1e1e";
-    modeButton.style.color = "#d3e4d9";
-  });
-
-  modeButton.addEventListener("mouseout", () => {
-    modeButton.style.background = "#ffffff";
-    modeButton.style.color = "#5a537b";
-  });
 }
 
 function toggleButtonText() {
-  const swapBtn = document.getElementById("mode_btn");
+  const swapBtn = document.querySelector(".mode_btn");
   if (swapBtn.innerHTML === "Dark Mode") {
     swapBtn.innerHTML = "Light Mode";
   } else {
