@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Style Link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Document Title -->
+    <title>Unit Convertor</title>
+  </head>
+  <body>
+    <button id="mode_btn">Dark Mode</button>
+
+    <div class="container">
+      <div class="header">
+        <h1 id="title">Metric/Imperial Unit Conversion</h1>
+
+        <div class="holder">
+          <input type="number" id="convertor_value" class="display_value" />
+        </div>
+
+        <button class="convertor_btn">Convert</button>
+      </div>
+
+      <div class="wrapper">
+        <div class="length">
+          <p class="length_title">Length (Meter/Feet)</p>
+
+          <p class="length_info">Invalid Value</p>
+        </div>
+
+        <div class="volume">
+          <p class="volume_title">Volume (Liters/Gallons)</p>
+
+          <p class="volume_info">Invalid Value</p>
+        </div>
+
+        <div class="mass">
+          <p class="mass_title">Mass (Kilograms/Pounds)</p>
+
+          <p class="mass_info">Invalid Value</p>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript File Link -->
+    <script src="script.js"></script>
+  </body>
+</html>
