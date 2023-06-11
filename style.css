@@ -27,6 +27,8 @@ body {
 .mode_btn:hover {
   background: #ffffff;
   color: #5a537b;
+
+  transition: 0.1s ease-in-out;
 }
 
 .container {
@@ -255,4 +257,6 @@ input::-webkit-inner-spin-button {
 .lightBg:hover {
   background: #1f1e1e;
   color: #ffffff;
+
+  transition: 0.1s ease-in-out;
 }
