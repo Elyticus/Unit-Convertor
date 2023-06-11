@@ -58,8 +58,6 @@ modeButton.addEventListener("click", toggleButtonText);
 
 // Set-up the functionality_______________________________________________________
 
-const displayMeters = document.getElementById("display_meters");
-
 /*
 1 meter = 3.281 feet
 1 liter = 0.264 gallon
